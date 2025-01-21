@@ -74,6 +74,9 @@ a{
 .navbar button:hover{
     background-color: #01ACFD;
 }
+.navbar i{
+    display: none;
+}
 
 /* Hero / Banner Section */
 .hero{
@@ -340,5 +343,146 @@ a{
     gap: 15px;
     padding-top: 15px;
 
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 576px){
+    *{
+        padding: 0;
+        margin: 0;
+        width: auto;
+    }
+
+    /* Nav Section */
+    .navbar{
+        border: 1px solid #FEA301;
+    }
+    .navbar-logo img{
+        height: 26px;
+    }
+    .navbar-logo h1{
+        display: none;
+    }
+    .navbar-menu{
+        display: none;
+    }
+    .navbar button{
+        display: none;
+    }
+    .navbar i{
+        display: block;
+        height: 40px;
+        padding-top: 25px;
+    }
+    
+    /* Hero / Banner Section */
+    .hero{
+        display: grid;
+        grid-template-areas: 
+        "hero-img"
+        "hero-text"
+        ;
+        height: auto;
+    }
+    .hero-img{
+        grid-area: hero-img;
+        margin-left: 10px;
+    }
+    .hero-img img{
+        height: 300px;
+    }
+    .hero-text{
+        grid-area: hero-text;
+    }
+    .hero-text h1{
+        font-size: 24px;
+        text-align: center;
+        padding-block: 18px;
+    }
+    .hero-text p{
+        font-size: 15px;
+        text-align: center;
+        padding-bottom: 15px;
+    }
+    .hero-text button{
+        display: block;
+        margin: 1rem auto;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        background-color: #FEA301;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 4px;
+    }
+
+    /* Standard Curriculum Section */
+    .standard-curriculum{
+        height: auto;
+    }
+    .standard-curriculum h1{
+        font-size: 20px;
+    }
+    .standard-curriculum-cards{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Our Stories Section */
+    .our-stories{
+        height: auto;
+        margin-left: -15px;
+    }
+    .our-stories h1{
+        text-align: center;
+        font-size: 20px;
+    }
+    .our-stories-cards-big{
+        display: none;
+    }
+    .our-stories-cards-small{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .our-stories-cards-small div{
+        background-color: #FFFFFF;
+        border: none;
+        border-radius: 10px;
+        width: 120px;
+        margin-left: 10px;
+        position: relative;
+    }
+    .our-stories-cards-small div img{
+        border-radius: 10px;
+        width: 120px;
+    }
+    .our-stories-cards-small div button{
+        position: absolute; 
+        bottom: 35%; 
+        left: 10%;
+        transform: translate(-50%, 50%); 
+        padding: 5px;
+        background-color: #3CD8E8;
+        border: none;
+        border-radius: 40px;
+        color: #FFFFFF;
+        font-size: 6px;
+    }
+    .our-stories-cards-small div h4{
+        font-size: 8px;
+        padding-left: 10px;
+        padding-block: 10px;
+    }    
+
+    /* Footer Section */
+    .footer{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 21px;
+    }
+    .footer-social-media-column h2{
+        text-align: left;
+    }
 }
 
