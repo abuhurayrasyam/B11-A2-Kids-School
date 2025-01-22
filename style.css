@@ -97,12 +97,15 @@ a{
     color: #242424;
     padding-bottom: 15px;
 }
+.hero-text-br-l{
+    display: none;
+}
 .hero-text button{
     padding-block: 15px;
     padding-inline: 40px;
     background-color: #000000;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     color: #FFFFFF;
 }
 .hero-text button:hover{
@@ -216,21 +219,25 @@ a{
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     width: 500px;
+    position: relative;
 }
 .our-stories-cards-big img{
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     width: 500px;
 }
-.our-stories-cards-big button{
-    margin-top: -50px;
-    margin-left: 35px;
-    padding-block: 20px;
-    padding-inline: 40px;
+.our-stories-cards-big span{
+    position: absolute; 
+    bottom: 43.5%; 
+    left: 19%;
+    transform: translate(-50%, 50%); 
+    padding-inline: 20px;
+    padding-block: 10px;
     background-color: #3CD8E8;
     border: none;
     border-radius: 40px;
     color: #FFFFFF;
+    font-size: 10px;
 }
 .our-stories-cards-big h2{
     padding-left: 35px;
@@ -254,24 +261,29 @@ a{
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 25px;
     margin-left: 10px;
+    position: relative;
 }
 .our-stories-cards-small div img{
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
-.our-stories-cards-small div button{
-    margin-top: -50px;
-    margin-left: 35px;
-    padding-block: 20px;
-    padding-inline: 40px;
+.our-stories-cards-small div span{
+    position: absolute; 
+    bottom: 34.5%; 
+    left: 33%;
+    transform: translate(-50%, 50%); 
+    padding-inline: 20px;
+    padding-block: 10px;
     background-color: #3CD8E8;
     border: none;
     border-radius: 40px;
     color: #FFFFFF;
+    font-size: 10px;
 }
 .our-stories-cards-small div h4{
     padding-left: 35px;
     padding-block: 10px;
+    margin-top: 20px;
 }
 .our-stories-button{
     display: flex;
@@ -284,7 +296,7 @@ a{
     padding-inline: 40px;
     background-color: #000000;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     color: #FFFFFF;
 }
 .our-stories-button button:hover{
@@ -317,6 +329,9 @@ a{
     color: #F2E8FF;
     padding-top: 15px;
 }
+.footer-about-column-br-l{
+    display: none;
+}
 .footer-navigation-column h2{
     font-size: 20px;
     color: #FFFFFF;
@@ -345,7 +360,9 @@ a{
 
 }
 
-/* Mobile Responsiveness */
+
+
+/* Mobile Responsiveness (Max Width 576px) */
 @media screen and (max-width: 576px){
     *{
         padding: 0;
@@ -386,7 +403,8 @@ a{
     }
     .hero-img{
         grid-area: hero-img;
-        margin-left: 10px;
+        margin-top: 25px;
+        margin-left: 8px;
     }
     .hero-img img{
         height: 300px;
@@ -400,16 +418,19 @@ a{
         padding-block: 18px;
     }
     .hero-text p{
-        font-size: 15px;
+        font-size: 12px;
         text-align: center;
         padding-bottom: 15px;
+    }
+    .hero-text-br-s{
+        display: none;
     }
     .hero-text button{
         display: block;
         margin: 1rem auto;
         padding: 0.5rem 1rem;
         text-align: center;
-        background-color: #FEA301;
+        background-color: #000000;
         color: #FFFFFF;
         border: none;
         border-radius: 4px;
@@ -420,21 +441,54 @@ a{
         height: auto;
     }
     .standard-curriculum h1{
-        font-size: 20px;
+        font-size: 22px;
+        margin-top: -40px;
+        margin-bottom: -20px;
     }
     .standard-curriculum-cards{
         display: flex;
         flex-direction: column;
+        gap: 25px;
+    }
+    .standard-curriculum-cards-kinder{
+        font-size: 10px;
+        height: 180px;
+    }
+    .standard-curriculum-cards-kinder img{
+        height: 80px;
+        margin-top: -20px;
+    }
+    .standard-curriculum-cards-elementary{
+        font-size: 10px;
+        height: 180px;
+    }
+    .standard-curriculum-cards-elementary img{
+        height: 80px;
+        margin-top: -20px;
+    }
+    .standard-curriculum-cards-middle{
+        font-size: 10px;
+        height: 180px;
+    }
+    .standard-curriculum-cards-middle img{
+        height: 80px;
+        margin-top: -20px;
+    }
+    .standard-curriculum-arrows{
+        display: none;
     }
 
     /* Our Stories Section */
     .our-stories{
         height: auto;
-        margin-left: -15px;
+        margin-left: -11px;
     }
     .our-stories h1{
         text-align: center;
         font-size: 20px;
+        margin-top: -40px;
+        margin-right: -20px;
+        margin-bottom: -20px;
     }
     .our-stories-cards-big{
         display: none;
@@ -456,10 +510,10 @@ a{
         border-radius: 10px;
         width: 120px;
     }
-    .our-stories-cards-small div button{
+    .our-stories-cards-small div span{
         position: absolute; 
-        bottom: 35%; 
-        left: 10%;
+        bottom: 36.5%; 
+        left: 33%;
         transform: translate(-50%, 50%); 
         padding: 5px;
         background-color: #3CD8E8;
@@ -472,7 +526,17 @@ a{
         font-size: 8px;
         padding-left: 10px;
         padding-block: 10px;
-    }    
+        margin-top: auto;
+    }
+    .our-stories-button button{
+        padding-block: 10px;
+        padding-inline: 30px;
+        background-color: #000000;
+        border: none;
+        border-radius: 15px;
+        color: #FFFFFF;
+        margin-top: -20px;
+    }
 
     /* Footer Section */
     .footer{
@@ -480,6 +544,21 @@ a{
         flex-direction: column;
         height: auto;
         gap: 21px;
+    }
+    .footer-about-column img{
+        height: 65px;
+    }
+    .footer-about-column h2{
+        font-size: 25px;
+        color: #FFFFFF;
+    }
+    .footer-about-column p{
+        color: #F2E8FF;
+        padding-top: 15px;
+        font-size: 13px;
+    }
+    .footer-about-column-br-s{
+        display: none;
     }
     .footer-social-media-column h2{
         text-align: left;
